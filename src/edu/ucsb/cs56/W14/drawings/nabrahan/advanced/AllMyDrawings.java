@@ -30,17 +30,17 @@ public class AllMyDrawings
      */
 	 public static void drawPicture1(Graphics2D g2) {
 	 
-	 pcieComponent p1 = new pcieComponent(100, 250, 50, 75);
-	 p1.setColor(Color.GREEN); g2.graw(p1);
+	 pciComponent h1 = new pciComponent(100, 250, 50, 75);
+	 g2.setColor(Color.BLUE); g2.draw(h1);
 	 
-	 Shape h2 = ShapeTransforms.scaledCopyOfLL(p1, 0.5, 0.5);
+       	 Shape h2 = ShapeTransforms.scaledCopyOfLL(h1, 0.5, 0.5);
 	 h2 = ShapeTransforms.translatedCopyOf(h2, 150, 0);
 	 g2.setColor(Color.BLACK); g2.draw(h2);
 	 
 	 h2 = ShapeTransforms.scaledCopyOfLL(h2, 4, 4);
 	 h2 = ShapeTransforms.translatedCopyOf(h2, 150, 0);
 	 
-	 Stroke thick = new BasicTroke(4.0f, BasicStroke.CAP_BUTT, BasicStroke.JOIN_BEVEL);
+	 Stroke thick = new BasicStroke(4.0f, BasicStroke.CAP_BUTT, BasicStroke.JOIN_BEVEL);
 	 
 	 Stroke orig = g2.getStroke();
 	 g2.setStroke(thick);
@@ -69,14 +69,14 @@ public class AllMyDrawings
 	graphicsCard large = new graphicsCard(100,50,225,150);
 	graphicsCard smallCC = new graphicsCard(20,50,40,30);
 	graphicsCard tallSkinny = new graphicsCard(20,150,20,40);
-	graphicscard shortFat = new graphicsCard(20,250,40,20);
+	graphicsCard shortFat = new graphicsCard(20,250,40,20);
 	
 	g2.setColor(Color.RED);     g2.draw(large);
 	g2.setColor(Color.GREEN);   g2.draw(smallCC);
 	g2.setColor(Color.BLUE);    g2.draw(tallSkinny);
 	g2.setColor(Color.MAGENTA); g2.draw(shortFat);
 	
-	pcieComponent h1 = new pcieComponent(100,250,50,75);
+	pciComponent h1 = new pciComponent(100,250,50,75);
 	g2.setColor(Color.CYAN); g2.draw(h1);
 	
 	// Make a black house that's half the size, 
